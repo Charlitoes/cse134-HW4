@@ -57,7 +57,7 @@
         <h1><u>Contact Me!</u></h1>
         <!-- used a form to create a space for text boxes so viewers can send me a message -->
         <!-- they will need a name, valid email, their message and a rating to be able to send a message through this form -->
-        <form action="placeholder.script" method="POST">
+        <form action="https://httpbin.org/post" method="POST">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
             <br>
@@ -67,17 +67,7 @@
             <label for="message">Your Message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
             <br>
-            <label for="rating">Your Rating:</label>
-            <select id="rating">
-                <optgroup label="Rating">
-                    <option value="5">5</option>
-                    <option value="4">4</option>
-                    <option value="3">3</option>
-                    <option value="2">2</option>
-                    <option value="1">1</option>
-                </optgroup>
-            </select>
-            <br>
+            <input type="hidden" name="potential_bot" value="true">
             <button type="submit" >Send Message</button>
         </form>
     </main>
