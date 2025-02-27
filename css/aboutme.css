@@ -1,0 +1,142 @@
+main *{
+    background-color: white;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+}
+
+.Timeline svg {
+    width: 100%;   /* Makes the SVG responsive, scaling to 100% of its container's width */
+    height: auto;  /* Maintains aspect ratio of the SVG */
+}
+
+.Timeline text {
+    font-size: .6vw; /* Scale text size based on viewport width */
+}
+
+/* style for what I enjoy doing */
+.Enjoyments {
+    padding: 30px;
+    margin-bottom: 20px;
+    font-size: 1.2vw;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.Hobbies {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    details {
+        padding: 10px;
+        margin: 0;
+
+        summary {
+            padding-bottom: 10px;
+        }
+
+        p.minecraft:hover {
+            color: green;
+        }
+    }
+
+    iframe {
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 12px;   
+        width: 50%; 
+        height: 152px;
+    }
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 767px) {
+    h2 {
+        font-size: 6vw;
+    }
+    
+    .Timeline text {
+        font-size: 3.5vw; /* Scale text size based on viewport width */
+    }
+
+    .Enjoyments{
+        font-size: 5vw;
+    }
+
+    .Hobbies{
+        font-size: 5vw;
+    }
+
+    .Hobbies iframe{
+        border-radius: 10px;   
+        width: 100%; 
+        height: 100px;
+    }
+    
+
+}
+
+/* tablet/laptop breakpoint */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .Timeline text {
+        font-size: 1.25vw; /* Scale text size based on viewport width */
+    }
+
+    .Enjoyments{
+        font-size: 4vw;
+    }
+
+    .Hobbies{
+        font-size: 4vw;
+    }
+
+    blockquote{
+        font-size: 3vw;
+    }
+    
+    .profile{
+        display: flex;
+        justify-content: center;
+    }
+
+    h2{
+        font-size: 5vw;
+    }
+    .profile h2.name{
+        font-size: 4vw;
+    }
+
+    .profile p{
+        font-size: 2.75vw;
+    }
+
+    .Hobbies iframe {
+        margin: 0;
+        padding: 0;
+        border: none;
+        height: 150px;
+        width: 300px;
+    }
+}

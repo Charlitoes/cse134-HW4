@@ -1,0 +1,14 @@
+main * {
+    background-color: white;
+}
+
+form:has(input:valid, textarea:valid) button {
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form:has(input:valid, textarea:valid) button:hover {
+    background-color: darkgrey;
+}
