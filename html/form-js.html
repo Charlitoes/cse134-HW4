@@ -46,7 +46,8 @@
             <li><a href="/html/aboutme.html">About Me</a></li>
             <li><a href="/html/projects.html">Projects</a></li>
             <li><a href="/html/skills.html">Skills</a></li>
-            <li><a href="/html/contactme.html"><b>Contact Me</b></a></li>
+            <li><a href="/html/form-no-js.html">Contact Me (no js)</a></li>
+            <li><a href="/html/form-js.html"><b>Contact Me (with js)</b></a></li>
             <li><a href="/assets/Resume-Charlie-Trinh.pdf" target="_blank">Resume</a></li>
         </ul>
       </nav>
@@ -57,19 +58,29 @@
         <h1><u>Contact Me!</u></h1>
         <!-- used a form to create a space for text boxes so viewers can send me a message -->
         <!-- they will need a name, valid email, their message and a rating to be able to send a message through this form -->
-        <form action="https://httpbin.org/post" method="POST">
+        <form action="https://httpbin.org/post" method="POST" id="contactForm">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
+            <p class="error-message" id="name-error">Name is required.</p>
             <br>
+        
             <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required>
-            <br><br>
+            <p class="error-message" id="email-error">Enter a valid email address.</p>
+            <br>
+        
             <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" maxlength="148" required></textarea>
+            <p id="error" class="error-message">Only letters, numbers, and spaces are allowed.</p>
+            <p id="charCount" class="char-count">148 characters remaining</p>
+        
             <br>
             <input type="hidden" name="potential_bot" value="true">
-            <button type="submit" >Send Message</button>
+            <input type="hidden" name="form-errors" id="formErrors">
+            <button type="submit">Send Message</button>
         </form>
+
+        <script src="/js/form.js"></script>
     </main>
 
     <hr>
