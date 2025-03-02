@@ -41,7 +41,7 @@ button.theme-toggle-button{
     font-size: 2em; /* Adjust the font size if necessary */
     cursor: pointer;
     z-index: 1000; /* Ensures the button stays on top of other elements */
-    padding: 10px;
+    padding-left: 10px;
     transition: transform 0.3s ease;
 }
 
